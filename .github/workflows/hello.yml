@@ -19,6 +19,12 @@ jobs:
 
             - name: print trigger branch name
               run: echo "Triggered by branch:" ${{ github.ref_name }}
+
+            - name: print username which triggered the workflow
+              run: echo "Triggered by branch:" ${{ github.actor }}
+            
+            - name: print event name which triggered the workflow
+              run: echo "Triggered by branch:" ${{ github.event_name }}
               
             - name: list files in the repository
               run: ls -la
