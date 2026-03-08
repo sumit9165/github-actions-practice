@@ -30,4 +30,7 @@ jobs:
               run: ls -la
 
             - name: print the runners operating system
-              run: echo "Running on OS:" ${{ runner.os}}
+              run: echo "Running on OS:" {{ runner.os}}
+
+            - name: print exit code or misspell 
+              run: exit 1
